@@ -1,11 +1,11 @@
-import Banner from "./components/Banner";
+import Hero from "./components/Hero";
 import ScrollableContainer from "./components/ScrollableContainer";
 
 function App() {
 
   return (
     <>
-      <Banner />
+      <Hero />
       <ScrollableContainer title="About Me">
         <DummyContent />
       </ScrollableContainer>
