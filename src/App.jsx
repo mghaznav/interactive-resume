@@ -1,3 +1,4 @@
+import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import ScrollableContainer from "./components/ScrollableContainer";
 
@@ -5,6 +6,7 @@ function App() {
 
   return (
     <>
+      <Navigation />
       <Hero />
       <ScrollableContainer title="About Me">
         <DummyContent />

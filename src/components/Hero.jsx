@@ -10,7 +10,7 @@ export default function Hero() {
             </h2>
             <h3 className='md:text-4xl md:my-8 text-3xl my-4 text-navy-blue [text-shadow:_-2px_5px_10px_rgb(0_0_0_/_20%)]'>I&apos;m a Software Developer</h3>
             <button
-              className="bg-navy-blue hover:bg-white text-white hover:text-navy-blue font-bold
+              className="bg-navy-blue hover:bg-white text-white hover:text-navy-blue font-bold transition-all duration-300
                         md:p-4 md:text-base p-3 text-sm my-4 rounded-lg [box-shadow:_-2px_10px_20px_rgb(0_0_0_/_20%)]">
               Download Resume
             </button>
