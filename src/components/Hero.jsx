@@ -10,7 +10,7 @@ export default function Hero() {
             Hello, My name&apos;s <span className="text-navy-blue">Muhammad Ali</span> Ghaznavi
           </h2>
           <h3 className='md:text-4xl md:my-8 text-3xl my-4 text-navy-blue [text-shadow:_-2px_5px_10px_rgb(0_0_0_/_20%)]'>I&apos;m a Software Developer</h3>
-          <Button flip>Download Resume</Button>
+          <Button>Download Resume</Button>
         </div>
       </div>
       <div className="bg-navy-blue w-1/3 hidden lg:block"></div>
