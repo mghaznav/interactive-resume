@@ -1,5 +1,6 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
+import AboutMe from "./components/AboutMe";
 import ScrollableContainer from "./components/ScrollableContainer";
 
 function App() {
@@ -8,9 +9,7 @@ function App() {
     <>
       <Navigation/>
       <Hero />
-      <ScrollableContainer title="About Me">
-        <DummyContent />
-      </ScrollableContainer>
+      <AboutMe />
       <div className="h-[25vh]" />
       <ScrollableContainer title="Work Experience" >
         <DummyContent />

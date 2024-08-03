@@ -2,8 +2,9 @@ import { useState, useEffect, useRef} from "react";
 
 import { MdMenu } from "react-icons/md";
 
-import { SECTIONS, SOCIALS } from "../data";
+import { SECTIONS } from "../data";
 import logo from "../assets/mag-logo.png";
+import Socials from "./Socials";
 
 export default function Navigation() {
   // Adjust for scroll
@@ -38,7 +39,7 @@ export default function Navigation() {
   return (
     <header
       className={`flex fixed top-0 w-full z-10 items-center transition-all duration-300
-                ${scrolled ? 'bg-white h-20 border-b border-b-navy-blue/50' : 'bg-transparent h-24'}`}
+                ${scrolled ? 'bg-white h-20 shadow-[0px_5px_10px_rgba(0,0,0,0.2)]' : 'bg-transparent h-24'}`}
     >
       <div className="lg:flex hidden w-2/3 justify-between items-center">
         <img src={logo} className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-16'}`}/>
@@ -53,17 +54,7 @@ export default function Navigation() {
         </nav>
       </div>
       <div className="lg:flex hidden w-1/3 px-8 items-center justify-end gap-8">
-        {SOCIALS.map(social => {
-          return (
-            <a
-              key={social.id}
-              href={social.link}
-              className={scrolled ? socialScrollClasses : socialClasses}
-            >
-              <social.icon />
-            </a>
-          );
-        })}
+        <Socials styles={scrolled ? socialScrollClasses : socialClasses} />
       </div>
       <div className="lg:hidden flex w-full items-center justify-between">
         <img src={logo} className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-16'}`}/>
