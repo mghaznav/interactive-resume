@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef} from "react";
 
 import { MdMenu } from "react-icons/md";
 
@@ -36,9 +36,10 @@ export default function Navigation() {
   const socialScrollClasses = "text-5xl text-navy-blue/75 hover:text-navy-blue transition-all duration-300"
 
   return (
-    <header className={`flex fixed top-0 w-full z-10 items-center transition-all duration-300
-                      ${scrolled ? 'bg-white h-20 border-b border-b-navy-blue/50' : 'bg-transparent h-24'}`
-    }>
+    <header
+      className={`flex fixed top-0 w-full z-10 items-center transition-all duration-300
+                ${scrolled ? 'bg-white h-20 border-b border-b-navy-blue/50' : 'bg-transparent h-24'}`}
+    >
       <div className="lg:flex hidden w-2/3 justify-between items-center">
         <img src={logo} className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-16'}`}/>
         <nav className="flex gap-8 mx-8 items-center justify-between">

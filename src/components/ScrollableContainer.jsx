@@ -5,7 +5,7 @@ import AnimatedCard from './AnimatedCard';
 
 export default function ScrollableContainer({ title, children }) {
   // Get Card position according to screen size.
-  const getWidth = (width) => {
+  const getPosition = (width) => {
     if (width < 640) {
       return 2;
     } else if (width < 768) {
@@ -15,11 +15,13 @@ export default function ScrollableContainer({ title, children }) {
     }
   };
 
-  const [cardPosition, setCardPosition] = useState(getWidth(window.innerWidth));
+  const [cardPosition, setCardPosition] = useState(getPosition(window.innerWidth));
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     const handleResize = () => {
-      setCardPosition(getWidth(window.innerWidth));
+      setCardPosition(getPosition(window.innerWidth));
+      setWindowHeight(window.innerHeight);
     };
 
     window.addEventListener('resize', handleResize);
@@ -35,7 +37,7 @@ export default function ScrollableContainer({ title, children }) {
   }, []);
 
 
-  // Get container scroll progress
+  // Scroll through content
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -43,15 +45,10 @@ export default function ScrollableContainer({ title, children }) {
     offset: ["start end", "end start"]
   });
 
-  // Add scroll to content according to container scroll progress
-  const vhToPx = (vh) => window.innerHeight * (vh / 100);
-  const contentStart = vhToPx(100);
-  const contentEnd = -contentHeight - vhToPx(25);
-
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    [contentStart, contentEnd]
+    [windowHeight, -contentHeight - (windowHeight * 0.25)]
   );
 
   return (
@@ -61,7 +58,7 @@ export default function ScrollableContainer({ title, children }) {
       padding: `${cardPosition}rem`,
       height: `calc(100vh + ${contentHeight}px)`
     }}
-    className="bg-[#e0e0e0] relative scroll-smooth"
+    className="bg-white relative scroll-smooth"
     >
       <AnimatedCard position={cardPosition} title={title}>
         <div

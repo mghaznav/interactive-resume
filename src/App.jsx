@@ -6,20 +6,20 @@ function App() {
 
   return (
     <>
-      <Navigation />
+      <Navigation/>
       <Hero />
       <ScrollableContainer title="About Me">
         <DummyContent />
       </ScrollableContainer>
-      <div className="h-[50vh]" />
+      <div className="h-[25vh]" />
       <ScrollableContainer title="Work Experience" >
         <DummyContent />
       </ScrollableContainer>
-      <div className="h-[50vh]" />
+      <div className="h-[25vh]" />
       <ScrollableContainer title="Projects" >
         <DummyContent />
       </ScrollableContainer>
-      <div className="h-[50vh]">
+      <div className="h-[25vh]">
         <h1 className="text-4xl text-navy-blue">Footer</h1>
       </div>
     </>

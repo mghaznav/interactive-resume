@@ -29,8 +29,8 @@ export default function AnimatedCard({ position, title, children }) {
     <motion.section
       ref={contentCardRef}
       style={{
-        height: `calc(100vh - ${position * 2}rem)`,
-        top: `${position}rem`,
+        height: `calc(100vh - ${position * 2}rem - 5rem)`,
+        top: `calc(${position}rem + 5rem)`,
         scale,
         boxShadow,
       }}
