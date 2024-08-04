@@ -32,7 +32,7 @@ export default function Navigation() {
     mobileMenu.current.showModal();
   }
 
-  const pageLinksClasses = "flex-1 font-bold text-nowrap hover:text-navy-blue transition-all duration-100 [text-shadow:_-2px_5px_10px_rgb(0_0_0_/_20%)]";
+  const pageLinksClasses = "flex-1 font-bold text-nowrap hover:text-navy-blue transition-all duration-100";
   const socialClasses = "text-6xl text-white/75 hover:text-white transition-all duration-300";
   const socialScrollClasses = "text-5xl text-navy-blue/75 hover:text-navy-blue transition-all duration-300"
 
