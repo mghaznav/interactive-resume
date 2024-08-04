@@ -58,7 +58,7 @@ export default function ScrollableContainer({ title, children }) {
       padding: `${cardPosition}rem`,
       height: `calc(100vh + ${contentHeight}px)`
     }}
-    className="bg-white relative scroll-smooth"
+    className="bg-[#F1faff] relative scroll-smooth"
     >
       <AnimatedCard position={cardPosition} title={title}>
         <div
