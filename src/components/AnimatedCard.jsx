@@ -34,9 +34,9 @@ export default function AnimatedCard({ position, title, children }) {
         scale,
         boxShadow,
       }}
-      className="h-[100vh] bg-white sticky z-0 rounded-3xl p-16 overflow-hidden"
+      className="h-[100vh] bg-white sticky z-0 rounded-3xl overflow-hidden"
     >
-      <h1 className='text-4xl text-navy-blue mb-8'>{title}</h1>
+      <h1 className='text-4xl text-navy-blue font-bold mb-4 ml-16 mt-12'>{title}</h1>
       {children}
     </motion.section>
   );
