@@ -22,6 +22,7 @@ lerna-debug.log*
 *.png
 *.jpg
 *.jpeg
+*.webp
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
