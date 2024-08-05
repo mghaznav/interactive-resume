@@ -2,6 +2,7 @@ import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa";
 import { SiTesla } from "react-icons/si";
 import { IoMdCloudy } from "react-icons/io";
+import Pronav from "./assets/Pronav.jsx";
 
 export const SECTIONS = [
   {
@@ -71,21 +72,29 @@ export const WORK_EXP = [
       "Developed the back-end API using Laravel, MySQL & Redis which was deployed on AWS to create a reliable, scaleable and a highly performant system.",
       "Designed the back-end to combine Laravel's native MVC architecture with the Ports & Adapters architecture to facilitate integration of numerous third party API's."
     ]
+  },{
+    id: 3,
+    title: "Software Developer",
+    company: "ProNavigator",
+    logo: Pronav,
+    color: "#3f95b4",
+    time: "Jan 2022 - Aug 2022",
+    details: [
+      "Created endpoints conforming to REST API principles, using Python, YAML & AWS to support new features.",
+      "Built ReactJS components from scratch, based on Figma frames, to overhaul the UI of the company's flagship software.",
+      "Refactored the ReactJS front-end for internal tools to decrease coupling which reduced the steps required to add new tools from 10+ to 3 steps."
+    ]
+  },{
+    id: 4,
+    title: "Software Developer",
+    company: "ProNavigator",
+    logo: Pronav,
+    color: "#3f95b4",
+    time: "Jan 2021 - Aug 2021",
+    details: [
+      "Developed a modular suite of internal tools from scratch using NodeJS and JavaScript which reduced manual tasks by over 50%.",
+      "Created a tool to test the accuracy of a Natural Language Processing system and reduced testing time by over 95%"
+    ]
   }
-  // ,{
-  //   title: "Vehicle Operator",
-  //   company: "Tesla",
-  //   logo: SiTesla,
-  //   color: "#e41836",
-  //   time: "Nov 2023 - Present",
-  //   details: []
-  // },{
-  //   title: "Vehicle Operator",
-  //   company: "Tesla",
-  //   logo: SiTesla,
-  //   color: "#e41836",
-  //   time: "Nov 2023 - Present",
-  //   details: []
-  // }
 
 ]
