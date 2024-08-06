@@ -1,17 +1,16 @@
-import { useRef, useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-import AnimatedCard from './AnimatedCard';
+import ParallaxImage from "./ParallaxImage";
+import ParallaxContent from "./ParallaxContent";
 
-export default function ScrollableContainer({ title, children }) {
+export default function ScrollableContainer({ image, children }) {
   // Get Card position according to screen size.
   const getPosition = (width) => {
-    if (width < 640) {
-      return 2;
-    } else if (width < 768) {
-      return 3;
+    if (width < 768) {
+      return 0.5;
     } else {
-      return 4;
+      return 1;
     }
   };
 
@@ -24,11 +23,11 @@ export default function ScrollableContainer({ title, children }) {
       setWindowHeight(window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Get height of the content inside the children prop
+  // Get height of the content
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
 
@@ -58,26 +57,13 @@ export default function ScrollableContainer({ title, children }) {
       padding: `${cardPosition}rem`,
       height: `calc(100vh + ${contentHeight}px)`
     }}
-    className="bg-[#F1faff] relative scroll-smooth"
+    className="bg-[#f1faff] relative scroll-smooth"
     >
-      <AnimatedCard position={cardPosition} title={title}>
-        <div
-          className='w-full overflow-hidden'
-          style={{
-              clipPath: `inset(0)`
-          }}
-        >
-          <motion.article
-            ref={contentRef}
-            style={{
-              y
-            }}
-            className="flex w-full flex-col items-center justify-center inset-0 gap-4"
-          >
+      <ParallaxImage position={cardPosition} image={image}>
+          <ParallaxContent ref={contentRef} y={y}>
             {children}
-          </motion.article>
-        </div>
-      </AnimatedCard>
+          </ParallaxContent>
+      </ParallaxImage>
     </motion.div>
   );
 }
