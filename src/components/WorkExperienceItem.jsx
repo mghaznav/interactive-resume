@@ -28,7 +28,7 @@ export default function WorkExperienceItem({exp}) {
         <TimelineConnector className="bg-navy-blue" />
       </TimelineSeparator>
       <TimelineContent>
-        <div className="bg-white p-8 rounded-xl text-left shadow-[2px_5px_15px_rgba(0,0,0,0.2)]">
+        <div className="bg-light-blue p-8 rounded-xl text-left shadow-[2px_5px_15px_rgba(0,0,0,0.2)]">
           <h3 className="text-2xl text-navy-blue font-bold">{exp.title}</h3>
           <h4 className="text-lg text-navy-blue">{exp.company}</h4>
           <ul className="list-disc pl-4 my-2">

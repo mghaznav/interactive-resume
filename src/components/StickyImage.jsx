@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 
-export default function ParallaxImage({ image, position, children }) {
+export default function StickyImage({ image, position, children }) {
   const contentCardRef = useRef(null);
 
   const { scrollYProgress } = useScroll({

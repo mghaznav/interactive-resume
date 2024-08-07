@@ -8,7 +8,7 @@ export default function AboutMe() {
   const secTextStyles = "text-navy-blue/75 text-sm";
 
   return (
-    <section className="min-h-[50vh] bg-[#F1faff]">
+    <section className="min-h-[50vh] bg-light-blue">
       <div className="flex lg:flex-row flex-col lg:w-3/4 w-full justify-evenly mx-auto">
         <div className="hidden lg:block w-1/2 p-24">
           <img src={ali} className="rounded-3xl" />

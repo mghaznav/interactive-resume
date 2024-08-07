@@ -1,7 +1,7 @@
 import { forwardRef, useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
 
-const ParallaxContent = forwardRef(function ParallaxContent ({children, y}, ref) {
+const ScrollContentContainer = forwardRef(function ScrollContentContainer ({children, y}, ref) {
   const contentRef = useRef(null);
 
   useImperativeHandle(ref, () => ({
@@ -22,4 +22,4 @@ const ParallaxContent = forwardRef(function ParallaxContent ({children, y}, ref)
   );
 });
 
-export default ParallaxContent;
+export default ScrollContentContainer;

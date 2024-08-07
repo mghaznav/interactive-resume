@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import ParallaxImage from "./ParallaxImage";
-import ParallaxContent from "./ParallaxContent";
+import StickyImage from "./StickyImage";
+import ScrollContentContainer from "./ScrollContentContainer";
 
-export default function ScrollableContainer({ image, children }) {
+export default function ParallaxSection({ image, children }) {
   // Get Card position according to screen size.
   const getPosition = (width) => {
     if (width < 768) {
@@ -57,13 +57,13 @@ export default function ScrollableContainer({ image, children }) {
       padding: `${cardPosition}rem`,
       height: `calc(100vh + ${contentHeight}px)`
     }}
-    className="bg-[#f1faff] relative scroll-smooth"
+    className="bg-light-blue relative scroll-smooth"
     >
-      <ParallaxImage position={cardPosition} image={image}>
-          <ParallaxContent ref={contentRef} y={y}>
+      <StickyImage position={cardPosition} image={image}>
+          <ScrollContentContainer ref={contentRef} y={y}>
             {children}
-          </ParallaxContent>
-      </ParallaxImage>
+          </ScrollContentContainer>
+      </StickyImage>
     </motion.div>
   );
 }

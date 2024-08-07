@@ -2,7 +2,7 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import WorkExperience from "./components/WorkExperience";
-import ScrollableContainer from "./components/ScrollableContainer";
+import ParallaxSection from "./components/ParallaxSection";
 
 function App() {
 
@@ -12,9 +12,9 @@ function App() {
       <Hero />
       <AboutMe />
       <WorkExperience />
-      <ScrollableContainer title="Projects" >
+      <ParallaxSection>
         <DummyContent />
-      </ScrollableContainer>
+      </ParallaxSection>
       <div className="h-[25vh]">
         <h1 className="text-4xl text-navy-blue">Footer</h1>
       </div>

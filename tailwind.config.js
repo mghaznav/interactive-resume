@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'navy-blue': '#005389'
+        'navy-blue': '#005389',
+        'light-blue': '#f1faff'
       }
     },
   },
