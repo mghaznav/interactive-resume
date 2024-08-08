@@ -16,6 +16,7 @@ const ScrollContentContainer = forwardRef(function ScrollContentContainer ({chil
       style={{
         y
       }}
+      className="px-24"
     >
       {children}
     </motion.article>

@@ -11,7 +11,7 @@ export default function WorkExperienceItem({exp}) {
   return (
     <TimelineItem>
       <TimelineOppositeContent className="my-auto">
-        <p className="text-black/60">
+        <p className="text-black/70 font-bold">
           {exp.time}
         </p>
       </TimelineOppositeContent>
@@ -28,9 +28,10 @@ export default function WorkExperienceItem({exp}) {
         <TimelineConnector className="bg-navy-blue" />
       </TimelineSeparator>
       <TimelineContent>
-        <div className="bg-light-blue p-8 rounded-xl text-left shadow-[2px_5px_15px_rgba(0,0,0,0.2)]">
+        {/* <div className="bg-light-blue p-8 rounded-xl text-left shadow-[2px_5px_15px_rgba(0,0,0,0.2)]"> */}
+        <div className= "p-8 rounded-xl text-left border-navy-blue border-2">
           <h3 className="text-2xl text-navy-blue font-bold">{exp.title}</h3>
-          <h4 className="text-lg text-navy-blue">{exp.company}</h4>
+          <h4 className="text-lg text-black/70 font-bold mb-4 pb-4 border-navy-blue border-b-2">{exp.company}</h4>
           <ul className="list-disc pl-4 my-2">
             {exp.details.map(detail => {
               return (

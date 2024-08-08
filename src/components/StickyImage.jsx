@@ -25,6 +25,12 @@ export default function StickyImage({ image, position, children }) {
     ]
   );
 
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.25, 0.5, 0.75],
+    [0, 1, 0]
+  );
+
   return (
     <motion.section
       ref={contentCardRef}
@@ -37,6 +43,10 @@ export default function StickyImage({ image, position, children }) {
       }}
       className="bg-cover bg-center sticky w-full rounded-xl z-0 overflow-hidden"
     >
+      <motion.div
+        style={{opacity}}
+        className="absolute inset-0 bg-white"
+      />
       {children}
     </motion.section>
   );
