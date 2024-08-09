@@ -32,14 +32,14 @@ export default function Navigation() {
     mobileMenu.current.showModal();
   }
 
-  const pageLinksClasses = "flex-1 font-bold text-nowrap hover:text-navy-blue transition-all duration-100";
+  const pageLinksClasses = "flex-1 font-semibold text-nowrap hover:text-navy-blue transition-all duration-100";
   const socialClasses = "text-6xl text-white/75 hover:text-white transition-all duration-300";
   const socialScrollClasses = "text-5xl text-navy-blue/75 hover:text-navy-blue transition-all duration-300"
 
   return (
     <header
       className={`flex fixed top-0 w-full z-10 items-center transition-all duration-300
-                ${scrolled ? 'bg-white h-20 shadow-[0px_5px_10px_rgba(0,0,0,0.2)]' : 'bg-transparent h-24'}`}
+                ${scrolled ? 'bg-white h-20 shadow-[0px_0px_5px_rgba(0,0,0,0.1)]' : 'bg-transparent h-24'}`}
     >
       <div className="lg:flex hidden w-2/3 justify-between items-center">
         <img src={logo} className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-16'}`}/>
