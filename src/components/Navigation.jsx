@@ -4,7 +4,7 @@ import { MdMenu } from "react-icons/md";
 
 import { SECTIONS } from "../data";
 import logo from "../assets/mag-logo.png";
-import Socials from "./Socials";
+import Socials from "./General/Socials";
 
 export default function Navigation() {
   // Adjust for scroll

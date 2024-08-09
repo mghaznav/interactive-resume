@@ -1,4 +1,4 @@
-import { SOCIALS } from "../data";
+import { SOCIALS } from "../../data";
 
 export default function Socials({styles}) {
   return (

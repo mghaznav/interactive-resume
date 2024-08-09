@@ -1,6 +1,6 @@
 import headshot from "../assets/headshot.png";
 
-import Button from "./Button";
+import Button from "./General/Button";
 
 export default function Hero() {
   return (

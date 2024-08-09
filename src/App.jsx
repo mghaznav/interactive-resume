@@ -2,7 +2,7 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import WorkExperience from "./components/WorkExperience";
-import ParallaxSection from "./components/ParallaxSection";
+import ParallaxSection from "./components/General/ParallaxSection";
 
 function App() {
 
