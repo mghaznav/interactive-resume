@@ -3,11 +3,12 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import WorkExperience from "./components/WorkExperience";
 import ParallaxSection from "./components/General/ParallaxSection";
+import ScreenContextProvider from "./components/store/screen";
 
 function App() {
 
   return (
-    <>
+    <ScreenContextProvider>
       <Navigation/>
       <Hero />
       <AboutMe />
@@ -18,7 +19,7 @@ function App() {
       <div className="h-[25vh]">
         <h1 className="text-4xl text-navy-blue">Footer</h1>
       </div>
-    </>
+    </ScreenContextProvider>
   );
 }
 

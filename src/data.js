@@ -29,19 +29,19 @@ export const SECTIONS = [
 
 export const SOCIALS = [
   {
-    id: 1,
+    id: 'social_1',
     name: 'GitHub',
     icon: FaSquareGithub,
     link: '#'
   },
   {
-    id: 2,
+    id: 'social_2',
     name: 'LinkedIn',
     icon: FaLinkedin,
     link: '#'
   },
   {
-    id: 3,
+    id: 'social_3',
     name: 'Medium',
     icon: FaMedium,
     link: '#'
@@ -50,7 +50,7 @@ export const SOCIALS = [
 
 export const WORK_EXP = [
   {
-    id: 1,
+    id: 'exp_1',
     title: "Vehicle Operator",
     company: "Tesla",
     logo: SiTesla,
@@ -61,7 +61,7 @@ export const WORK_EXP = [
       "Performed real-world testing adhering to specified test protocols, offering ad-hoc support for critical tasks, and meeting team needs to ensure project milestones were met."
     ]
   },{
-    id: 2,
+    id: 'exp_2',
     title: "Software Developer & Co-founder",
     company: "Cloud OTA",
     logo: IoMdCloudy,
@@ -73,7 +73,7 @@ export const WORK_EXP = [
       "Designed the back-end to combine Laravel's native MVC architecture with the Ports & Adapters architecture to facilitate integration of numerous third party API's."
     ]
   },{
-    id: 3,
+    id: 'exp_3',
     title: "Software Developer",
     company: "ProNavigator",
     logo: Pronav,
@@ -85,7 +85,7 @@ export const WORK_EXP = [
       "Refactored the ReactJS front-end for internal tools to decrease coupling which reduced the steps required to add new tools from 10+ to 3 steps."
     ]
   },{
-    id: 4,
+    id: 'exp_4',
     title: "Software Developer",
     company: "ProNavigator",
     logo: Pronav,
