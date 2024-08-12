@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef, useContext} from "react";
+
 import { MdMenu } from "react-icons/md";
+import logo from "../assets/mag-logo.png";
 
 import { ScreenContext } from "./store/screen";
 import { SECTIONS } from "../data";
-import logo from "../assets/mag-logo.png";
-import Socials from "./General/Socials";
+import Socials from "./general/Socials";
 
 export default function Navigation() {
-  // Adjust for scroll
   const [scrolled, setScrolled] = useState(false);
   const { screenHeight } = useContext(ScreenContext);
 
@@ -26,7 +26,6 @@ export default function Navigation() {
     };
   }, [screenHeight]);
 
-  // Handle mobile menu
   const mobileMenu = useRef();
 
   function handleMenuOpen() {

@@ -15,7 +15,6 @@ export default function ParallaxSection({ image, children }) {
     setCardPadding(padding);
   }, [screenWidth]);
 
-  // Get height of the content
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
 
@@ -23,8 +22,6 @@ export default function ParallaxSection({ image, children }) {
     setContentHeight(contentRef.current.clientHeight);
   }, []);
 
-
-  // Scroll through content
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({

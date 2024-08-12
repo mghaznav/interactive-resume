@@ -1,7 +1,7 @@
 import ali from "../assets/Ali-min.jpg";
 
-import Button from "./General/Button";
-import Socials from "./General/Socials";
+import Button from "./general/Button";
+import Socials from "./general/Socials";
 
 export default function AboutMe() {
   const socialStyles = "text-6xl text-navy-blue/75 hover:text-navy-blue transition-all duration-300";

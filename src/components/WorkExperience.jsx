@@ -1,7 +1,7 @@
 import { Timeline } from "@mui/lab";
 import { StyledEngineProvider } from "@mui/material/styles";
 
-import ParallaxSection from "./General/ParallaxSection";
+import ParallaxSection from "./general/ParallaxSection";
 import WorkExperienceItem from "./WorkExperienceItem";
 
 import expBg from "../assets/exp_bg.jpeg"
